@@ -29,13 +29,13 @@ class ChangeRuler {
  * 所有的替换规则
  */
 const rulers = {
-    kebab2camal: new ChangeRuler(function (key) {
+    snake2camal: new ChangeRuler(function (key) {
         let newKey = key.replace(/[-_].?/g, function (val) {
             return val.toUpperCase().replace(/[-_]/, "");
         });
         return newKey;
     }),
-    camal2kebab: new ChangeRuler(function (key) {
+    camal2snake: new ChangeRuler(function (key) {
 
         let newKey = key.replace(/[A-Z]+/g, function (val) {
             return "_" + val.charAt(0).toLowerCase().concat(val.substr(1, val.length - 1));
@@ -70,16 +70,16 @@ const caseChanger = function (obj, op) {
  * 驼峰转换为下换线命名
  * @param {any} obj 
  */
-const camal2kebab = function (obj) {
-    return caseChanger(obj, rulers.camal2kebab);
+const camal2snake = function (obj) {
+    return caseChanger(obj, rulers.camal2snake);
 }
 /**下换线转换为驼峰命名
  * @param {any} obj
  */
-const kebab2camal = function (obj) {
-    return caseChanger(obj, rulers.kebab2camal);
+const snake2camal = function (obj) {
+    return caseChanger(obj, rulers.snake2camal);
 }
 module.exports = {
-    kebab2camal,
-    camal2kebab
+    snake2camal,
+    camal2snake
 }

@@ -1,4 +1,4 @@
-const { camal2kebab, kebab2camal } = require("./caseChanger");
+const { camal2snake, snake2camal } = require("./caseChanger");
 let a = {
     hei_boy: {
         my_coutes:[1,2,{a_a:"J"}],
@@ -11,6 +11,6 @@ let a = {
         }
     }
 }
-console.log(kebab2camal(a));
+console.log(snake2camal(a));
 console.log(a);
-console.log(camal2kebab(kebab2camal(a)))
+console.log(camal2snake(snake2camal(a)))

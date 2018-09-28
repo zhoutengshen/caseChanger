@@ -3,8 +3,8 @@
 
 ## use
 
-const { camal2kebab,... } = require("./caseChanger");
+const { camal2snake,... } = require("./caseChanger");
 
 var a = {...}; 
 
-var b = camal2kebab(a);
+var b = camal2snake(a);
