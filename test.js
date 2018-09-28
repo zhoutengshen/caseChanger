@@ -1,21 +1,16 @@
-const { camal2kebab } = require("./caseChanger");
+const { camal2kebab, kebab2camal } = require("./caseChanger");
 let a = {
-    a_a_00: {
-        a_a: "1",
-        C_b_a:{
-            c_b_:"123",
-            c_c:[1,2,3],
-            a_a:{
-                _f:{}
+    hei_boy: {
+        my_coutes:[1,2,{a_a:"J"}],
+        my_name: {
+            my_age: {
+                my_gender: {
+                    h_u: { a: "" }
+                }
             }
         }
-    },
-    bA_f: [
-        {a_a:1}
-    ],
-    c_F_f: function () { console.log("<<<") }
+    }
 }
-
-
-console.log(camal2kebab(a));
-console.log(camal2kebab(a).aA00.CBA.cC);
+console.log(kebab2camal(a));
+console.log(a);
+console.log(camal2kebab(kebab2camal(a)))
